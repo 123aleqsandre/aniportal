@@ -120,6 +120,1790 @@
     <script>
         // Sample anime data
         let animeList = [
+    {
+                id: 1,
+                title: "Demon Slayer",
+                image: "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+                rating: 8.7,
+                genres: ["Action", "Supernatural", "Shonen"],
+                year: 2019,
+                episodes: 26,
+                synopsis: "Tanjiro Kamado becomes a demon slayer to avenge his family and cure his sister's demonic transformation.",
+                link: "https://www.youtube.com/embed/qB4xSGP8oTg"
+            },
+            {
+                id: 2,
+                title: "Attack on Titan",
+                image: "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 9.1,
+                genres: ["Action", "Drama", "Dark Fantasy"],
+                year: 2013,
+                episodes: 75,
+                synopsis: "Humanity fights for survival against man-eating titans in a post-apocalyptic world.",
+                link: "https://www.youtube.com/embed/qB4xSGP8oTg"
+            },
+            {
+                id: 3,
+                title: "Naruto",
+                image: "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.5,
+                genres: ["Adventure", "Ninja", "Shonen"],
+                year: 2002,
+                episodes: 220,
+                synopsis: "A young ninja dreams of becoming the strongest leader in his village."
+                link: "https://www.youtube.com/embed/qB4xSGP8oTg"
+            },
+            {
+                id: 4,
+                title: "One Piece",
+                image: "https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.9,
+                genres: ["Adventure", "Pirates", "Shonen"],
+                year: 1999,
+                episodes: 1000,
+                synopsis: "Monkey D. Luffy sets out to become the Pirate King with his diverse crew."
+                link: "https://www.youtube.com/embed/qB4xSGP8oTg"
+            },
+            {
+                id: 5,
+                title: "My Hero Academia",
+                image: "https://m.media-amazon.com/images/M/MV5BNzgxMzI3NzgtYzE2Zi00MzlmLThlNWEtNWVmZWEyZjNkZWYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.6,
+                genres: ["Superhero", "Action", "Shonen"],
+                year: 2016,
+                episodes: 100,
+                synopsis: "In a world of superpowers, a powerless boy becomes a hero-in-training."
+            },
+            {
+                id: 6,
+                title: "Death Note",
+                image: "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 9.0,
+                genres: ["Supernatural", "Psychological", "Thriller"],
+                year: 2006,
+                episodes: 37,
+                synopsis: "A genius student finds a supernatural notebook that can kill anyone by writing their name."
+            },
+            {
+                id: 7,
+                title: "Psycho-Pass",
+                image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Psycho-Pass_key_visual.png/250px-Psycho-Pass_key_visual.png",
+                rating: 8.8,
+                genres: ["Sci-Fi", "Psychological", "Crime"],
+                year: 2012,
+                episodes: 22,
+                synopsis: "In a dystopian future, law enforcement uses a system that can detect criminal potential."
+            },
+            {
+                id: 8,
+                title: "Monster",
+                image: "https://m.media-amazon.com/images/M/MV5BYzU2MWQ5NGQtYmNlMC00ZjJkLWJmODItZDM5MDM3YmUyMWJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 9.2,
+                genres: ["Psychological", "Thriller", "Drama"],
+                year: 2004,
+                episodes: 74,
+                synopsis: "A brilliant surgeon's life changes after he saves a young boy who grows up to be a serial killer."
+            },
+            {
+                id: 9,
+                title: "Your Name",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
+                rating: 8.9,
+                genres: ["Romance", "Supernatural"],
+                year: 2016,
+                episodes: 1,
+                synopsis: "Two strangers mysteriously swap bodies and develop a deep connection across time and space."
+            },
+            {
+                id: 10,
+                title: "Your Lie in April",
+                image: "https://m.media-amazon.com/images/M/MV5BZGMyYmFmNzgtMWQ4NS00MWE2LTg4YmEtZGY1MTBiODE0YmE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.7,
+                genres: ["Romance", "Music", "Drama"],
+                year: 2014,
+                episodes: 22,
+                synopsis: "A pianist loses his passion until he meets a free-spirited violinist who changes his life."
+            },
+            {
+                id: 11,
+                title: "Steins;Gate",
+                image: "https://m.media-amazon.com/images/M/MV5BZjI1YjZiMDUtZTI3MC00YTA5LWIzMmMtZmQ0NTZiYWM4NTYwXkEyXkFqcGc@._V1_.jpg",
+                rating: 9.1,
+                genres: ["Sci-Fi", "Thriller", "Time Travel"],
+                year: 2009,
+                episodes: 24,
+                synopsis: "A self-proclaimed mad scientist accidentally invents a time machine with world-changing consequences."
+            },
+            {
+                id: 12,
+                title: "Neon Genesis",
+                image: "https://m.media-amazon.com/images/M/MV5BZjZjZGI3ZDQtODNmZC00NjE0LTlmYTUtOTljMWI2YjNmMTQ0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.8,
+                genres: ["Sci-Fi", "Mecha", "Psychological"],
+                year: 1995,
+                episodes: 26,
+                synopsis: "Teenagers pilot giant robots to defend Earth from mysterious alien entities called Angels."
+            },
+            {
+                id: 13,
+                title: "Violet Evergarden",
+                image: "https://m.media-amazon.com/images/M/MV5BMWUwNDFiNjQtYjQ0MC00MTcxLWE0MGQtNTdkYTlhZGU2NDFmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.7,
+                genres: ["Slice of Life", "Drama", "Historical"],
+                year: 2018,
+                episodes: 13,
+                synopsis: "A former child soldier becomes an auto memory doll, writing letters to help people express emotions."
+            },
+            {
+                id: 14,
+                title: "K-On!",
+                image: "https://upload.wikimedia.org/wikipedia/en/c/cd/K-On%21_season_2_key_visual.png",
+                rating: 8.5,
+                genres: ["Slice of Life", "Comedy", "Music"],
+                year: 2007,
+                episodes: 39,
+                synopsis: "High school girls form a music club and learn to play instruments together."
+            },
+            {
+                id: 15,
+                title: "Tokyo Ghoul",
+                image: "https://m.media-amazon.com/images/M/MV5BZWI2NzZhMTItOTM3OS00NjcyLThmN2EtZGZjMjlhYWMwODMzXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.6,
+                genres: ["Horror", "Dark Fantasy", "Action"],
+                year: 2011,
+                episodes: 24,
+                synopsis: "A college student becomes a half-ghoul and must navigate the dangerous world between humans and ghouls."
+            },
+            {
+                id: 16,
+                title: "Fullmetal Alchemist: Brotherhood",
+                image: "https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 9.1,
+                genres: ["Action", "Adventure", "Drama", "Fantasy", "Shonen"],
+                year: 2009,
+                episodes: 64,
+                synopsis: "Two brothers search for a Philosopher's Stone after an attempt to revive their deceased mother goes awry and leaves them in damaged physical forms."
+            },
+            {
+                id: 17,
+                title: "One Punch Man",
+                image: "https://m.media-amazon.com/images/M/MV5BNzMwOGQ5MWItNzE3My00ZDYyLTk4NzAtZWIyYWI0NTZhYzY0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.7,
+                genres: ["Action", "Comedy", "Sci-Fi", "Seinen"],
+                year: 2015,
+                episodes: 24,
+                synopsis: "The story of Saitama, a hero who can defeat any enemy with a single punch but seeks a worthy opponent after growing bored by a lack of challenge."
+            },
+            {
+                id: 18,
+                title: "Hunter x Hunter",
+                image: "https://m.media-amazon.com/images/M/MV5BZjNmZDhkN2QtNDYyZC00YzJmLTg0ODUtN2FjNjhhMzE3ZmUxXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_.jpg",
+                rating: 9.0,
+                genres: ["Action", "Adventure", "Fantasy", "Shonen"],
+                year: 2011,
+                episodes: 148,
+                synopsis: "A young boy sets out to become a Hunter, an elite member of society, to find his missing father who is also a legendary Hunter."
+            },
+            {
+                id: 19,
+                title: "Naruto Shippuden",
+                image: "https://m.media-amazon.com/images/M/MV5BMTE5NzIwMGUtYTE1MS00MDUxLTgyZjctOWVkZDAxM2M4ZWQ4XkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.6,
+                genres: ["Action", "Adventure", "Comedy", "Shonen"],
+                year: 2007,
+                episodes: 500,
+                synopsis: "Naruto returns to his village after a two-and-a-half year training period and continues his quest to become Hokage while dealing with the Akatsuki organization."
+            },
+            {
+                id: 20,
+                title: "Jujutsu Kaisen",
+                image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.7,
+                genres: ["Action", "Supernatural", "Horror", "Shonen"],
+                year: 2020,
+                episodes: 48,
+                synopsis: "A high school student joins a secret organization to fight cursed spirits and save his friends from a deadly curse inflicted on him."
+            },
+            {
+                id: 21,
+                title: "Cowboy Bebop",
+                image: "https://upload.wikimedia.org/wikipedia/en/a/a9/Cowboy_Bebop_key_visual.jpg",
+                rating: 8.9,
+                genres: ["Action", "Adventure", "Drama", "Seinen"],
+                year: 1998,
+                episodes: 26,
+                synopsis: "A ragtag group of bounty hunters chase criminals throughout the solar system while dealing with their pasts in a stylized, jazz-inspired future."
+            },
+            {
+                id: 22,
+                title: "Haikyuu!!",
+                image: "https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg",
+                rating: 8.7,
+                genres: ["Comedy", "Drama", "Sports", "Shonen"],
+                year: 2014,
+                episodes: 85,
+                synopsis: "A determined high school student joins the volleyball team despite his short height, hoping to prove himself and compete on the national stage."
+            },
+            {
+                id: 23,
+                title: "Mob Psycho 100",
+                image: "https://m.media-amazon.com/images/M/MV5BYzU3NDM4ZjgtY2UyMi00YTczLTgyNDEtMjBiMDJlOGUxNjcxXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.8,
+                genres: ["Action", "Comedy", "Supernatural"],
+                year: 2016,
+                episodes: 25,
+                synopsis: "A psychically gifted boy tries to live a normal life while keeping his powers in check, but dangerous organizations and other espers complicate his plans."
+            },
+            {
+                id: 24,
+                title: "Vinland Saga",
+                image: "https://m.media-amazon.com/images/M/MV5BNDA3MGNmZTEtMzFiMy00ZmViLThhNmQtMjQ4ZDc5MDEyN2U1XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.8,
+                genres: ["Action", "Adventure", "Drama", "Historical", "Seinen"],
+                year: 2019,
+                episodes: 24,
+                synopsis: "A young Viking seeks revenge against his father's killer while experiencing the harsh reality of being a warrior in medieval times."
+            },
+            {
+                id: 25,
+                title: "Made in Abyss",
+                image: "https://upload.wikimedia.org/wikipedia/en/9/9a/Made_in_Abyss_volume_1_cover.jpg",
+                rating: 8.9,
+                genres: ["Adventure", "Drama", "Fantasy", "Mystery"],
+                year: 2017,
+                episodes: 13,
+                synopsis: "A young orphaned girl descends into a mysterious and dangerous abyss in search of her mother, a legendary Cave Raider."
+            },
+            {
+                id: 26,
+                title: "Re:Zero -Starting Life in Another World-",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYVQgW9n-Sr1hpvYzKCtvMyaMqBKdCfvGC-Q&s",
+                rating: 8.2,
+                genres: ["Drama", "Fantasy", "Psychological", "Thriller"],
+                year: 2016,
+                episodes: 50,
+                synopsis: "A young man is transported to another world where he gains the ability to return to a save point upon death, using this power to protect those he cares about."
+            },
+            {
+                id: 27,
+                title: "Code Geass",
+                image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Code_Geass_R1_box_set_cover.jpg/250px-Code_Geass_R1_box_set_cover.jpg",
+                rating: 8.7,
+                genres: ["Action", "Drama", "Mecha", "Thriller"],
+                year: 2006,
+                episodes: 50,
+                synopsis: "An exiled prince gains the power to control anyone with direct eye contact and uses it to destroy the empire that conquered his homeland."
+            },
+            {
+                id: 28,
+                title: "Fruits Basket",
+                image: "https://m.media-amazon.com/images/M/MV5BYzIxYmRiYTQtODI3Zi00ODdkLWIwOTMtNWZiNjAwZjNlYjY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "Drama", "Romance", "Supernatural", "Shoujo"],
+                year: 2019,
+                episodes: 63,
+                synopsis: "An orphaned girl discovers a family cursed to transform into animals of the Chinese zodiac when hugged by someone of the opposite sex."
+            },
+            {
+                id: 29,
+                title: "A Silent Voice",
+                image: "https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+                rating: 8.9,
+                genres: ["Drama", "Romance", "Slice of Life"],
+                year: 2016,
+                episodes: 1,
+                synopsis: "A former bully meets the deaf girl he tormented in elementary school and sets out to make amends for his past behavior."
+            },
+            {
+                id: 30,
+                title: "Spy x Family",
+                image: "https://m.media-amazon.com/images/M/MV5BZDkwNjc0NWEtNzJlOC00N2YwLTk4MjktZGFlZDE2Y2QzOWI0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.6,
+                genres: ["Action", "Comedy", "Shonen"],
+                year: 2022,
+                episodes: 37,
+                synopsis: "A spy, an assassin, and a telepath form a temporary family for their own separate missions, unaware of each other's true identities."
+            },
+            {
+                id: 31,
+                title: "The Promised Neverland",
+                image: "https://m.media-amazon.com/images/M/MV5BMTYwYjYyZDgtMTQ3My00YTI4LThmZTUtZmU1MjllOWRlOTdhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
+                rating: 8.6,
+                genres: ["Horror", "Mystery", "Psychological", "Thriller", "Shonen"],
+                year: 2019,
+                episodes: 23,
+                synopsis: "Orphaned children discover the dark truth about their orphanage and plan a daring escape before they're harvested as food for demons."
+            },
+            {
+                id: 32,
+                title: "Spirited Away",
+                image: "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+                rating: 8.9,
+                genres: ["Adventure", "Fantasy", "Supernatural"],
+                year: 2001,
+                episodes: 1,
+                synopsis: "A young girl enters a world of spirits and must work in a bathhouse to free herself and her parents who have been turned into pigs."
+            },
+            {
+                id: 33,
+                title: "Dragon Ball Z",
+                image: "https://m.media-amazon.com/images/M/MV5BNGM5MTEyZDItZWNhOS00NzNkLTgwZTAtNWIzY2IzZmExOWMxXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Action", "Adventure", "Fantasy", "Shonen"],
+                year: 1989,
+                episodes: 291,
+                synopsis: "The adventures of Earth's greatest warrior Goku and his allies as they defend the planet from an assortment of villains ranging from aliens to magical creatures."
+            },
+            {
+                id: 34,
+                title: "Gintama",
+                image: "https://m.media-amazon.com/images/M/MV5BMDkxZTJjZTEtMDRjMy00Yzk1LWI5YjItMjIwYmVlYzhlZWZhXkEyXkFqcGdeQXVyNDQxNjcxNQ@@._V1_.jpg",
+                rating: 8.9,
+                genres: ["Action", "Comedy", "Historical", "Parody", "Sci-Fi", "Shonen"],
+                year: 2006,
+                episodes: 367,
+                synopsis: "In an era where aliens have invaded and taken over feudal Japan, a former samurai finds work however he can to pay the bills."
+            },
+            {
+                id: 35,
+                title: "Clannad: After Story",
+                image: "https://m.media-amazon.com/images/I/81R8HeREVwL.jpg",
+                rating: 9.0,
+                genres: ["Drama", "Romance", "Supernatural"],
+                year: 2008,
+                episodes: 24,
+                synopsis: "Follows the life of Tomoya Okazaki as he starts a family with Nagisa Furukawa and experiences the hardships and joys of adulthood."
+            },
+            {
+                id: 36,
+                title: "86 -Eighty Six-",
+                image: "https://static.myfigurecollection.net/upload/items/1/1335071-5bbe7.jpg",
+                rating: 8.4,
+                genres: ["Action", "Drama", "Mecha", "Sci-Fi"],
+                year: 2021,
+                episodes: 23,
+                synopsis: "The Republic of San Magnolia claims to have no casualties in their war while deploying unmanned drones, but the truth is they're operated by a discriminated minority group called the 86."
+            },
+            {
+                id: 37,
+                title: "Overlord",
+                image: "https://m.media-amazon.com/images/M/MV5BYjNjNDBmZjAtMGZiMS00ODBkLWFjYWItZWQ1ZjEwOGNmZDBjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.1,
+                genres: ["Action", "Adventure", "Fantasy", "Isekai"],
+                year: 2015,
+                episodes: 52,
+                synopsis: "When a popular MMORPG is about to be shut down, one player decides to stay logged in until the end, only to find himself trapped as his character in a new reality."
+            },
+            {
+                id: 38,
+                title: "Bleach",
+                image: "https://m.media-amazon.com/images/M/MV5BZjE0YjVjODQtZGY2NS00MDcyLThhMDAtZGQwMTZiOWNmNjRiXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.1,
+                genres: ["Action", "Adventure", "Supernatural", "Shonen"],
+                year: 2004,
+                episodes: 366,
+                synopsis: "A teenager gains the powers of a Soul Reaper and assumes the duties of defending humans from evil spirits and guiding departed souls to the afterlife."
+            },
+            {
+                id: 39,
+                title: "Mushoku Tensei: Jobless Reincarnation",
+                image: "https://m.media-amazon.com/images/M/MV5BYWQwNjk3MDItNDAxMS00YTQ2LWEyNDctMGYyZTE5OGQxNGQ1XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.7,
+                genres: ["Adventure", "Drama", "Fantasy", "Isekai"],
+                year: 2021,
+                episodes: 24,
+                synopsis: "A 34-year-old unemployed man is reincarnated in a magical world as Rudeus Greyrat and resolves to live his new life to the fullest without regrets."
+            },
+            {
+                id: 40,
+                title: "Chainsaw Man",
+                image: "https://m.media-amazon.com/images/I/81s8xJUzWGL.jpg",
+                rating: 8.6,
+                genres: ["Action", "Horror", "Supernatural", "Shonen"],
+                year: 2022,
+                episodes: 12,
+                synopsis: "A poor young man who will do anything for money finds his life changed forever when he merges with his pet devil to become Chainsaw Man."
+            },
+            {
+                id: 41,
+                title: "JoJo's Bizarre Adventure",
+                image: "https://m.media-amazon.com/images/M/MV5BZDc3NGQ3ZWQtYjNkOC00MjhiLTg2N2YtNmZlOGNiZTFkOWNhXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Action", "Adventure", "Supernatural", "Shonen"],
+                year: 2012,
+                episodes: 190,
+                synopsis: "The story of the Joestar family, who are possessed with unique powers, and their battles against supernatural foes across generations."
+            },
+            {
+                id: 42,
+                title: "Black Clover",
+                image: "https://m.media-amazon.com/images/M/MV5BNTAzYTlkMWEtOTNjZC00ZDU0LWI5ODUtYTRmYzY0MTAzYWZlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
+                rating: 8.2,
+                genres: ["Action", "Comedy", "Fantasy", "Magic", "Shonen"],
+                year: 2017,
+                episodes: 170,
+                synopsis: "In a world where magic is everything, a boy born without magical powers strives to become the Wizard King by obtaining a powerful grimoire."
+            },
+            {
+                id: 43,
+                title: "Berserk",
+                image: "https://upload.wikimedia.org/wikipedia/en/4/4a/Berserk_vol01.png",
+                rating: 8.7,
+                genres: ["Action", "Adventure", "Drama", "Horror", "Seinen"],
+                year: 1997,
+                episodes: 25,
+                synopsis: "A lone mercenary seeks revenge against his former best friend who sacrificed their comrades to become a powerful demon lord."
+            },
+            {
+                id: 44,
+                title: "Assassination Classroom",
+                image: "https://m.media-amazon.com/images/M/MV5BZjBkYmRiOTAtY2IwOS00ZWU3LTk3YjItNjMzYWZiMDE1MjcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.3,
+                genres: ["Action", "Comedy", "School", "Shonen"],
+                year: 2015,
+                episodes: 47,
+                synopsis: "A powerful tentacled creature who destroyed 70% of the moon becomes a teacher for a class of misfits, challenging them to assassinate him before he destroys Earth."
+            },
+            {
+                id: 45,
+                title: "Dr. Stone",
+                image: "https://m.media-amazon.com/images/M/MV5BYzZkYjM1MWMtNTY3Mi00MTMzLTlhNmQtN2ExZjFkYzdjZmFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Adventure", "Comedy", "Shonen"],
+                year: 2019,
+                episodes: 35,
+                synopsis: "After humanity is petrified for 3,700 years, a scientific genius awakens and plans to restore civilization using science."
+            },
+            {
+                id: 46,
+                title: "Ghost in the Shell: Stand Alone Complex",
+                image: "https://m.media-amazon.com/images/M/MV5BY2NkZmQwOWQtNDc3Mi00MzVhLWI5NGUtNzg2ODBhMWZhNjgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.5,
+                genres: ["Action", "Cyberpunk", "Mystery", "Seinen"],
+                year: 2002,
+                episodes: 52,
+                synopsis: "In a futuristic world filled with cyborgs and networked intelligence, a special police unit investigates complex cybercrimes and terrorism cases."
+            },
+            {
+                id: 47,
+                title: "Fate/Zero",
+                image: "https://m.media-amazon.com/images/M/MV5BMTEyMjRiYjUtMzJkOC00NDBmLWI4Y2YtNDk5ZTQyMDNhMjgxXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Action", "Fantasy", "Supernatural"],
+                year: 2011,
+                episodes: 25,
+                synopsis: "Seven mages and their summoned historical heroes fight in a battle royale for the Holy Grail, an omnipotent magical device that can grant any wish."
+            },
+            {
+                id: 48,
+                title: "Parasyte -the maxim-",
+                image: "https://m.media-amazon.com/images/M/MV5BZTViMTZlMjgtNjVmZC00NjEzLWJlN2QtMjQ4ZTYxNzBiZmMyXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Action", "Drama", "Horror", "Psychological", "Seinen"],
+                year: 2014,
+                episodes: 24,
+                synopsis: "A high school student's right hand becomes infected with an alien parasite, and together they must defend themselves from other parasites that prey on humans."
+            },
+            {
+                id: 49,
+                title: "Kaguya-sama Love War",
+                image: "https://m.media-amazon.com/images/M/MV5BMTM1ZWViNWMtZWY2ZC00YmYyLTk1ZGEtMzRjOWI2YTM1OTI3XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.7,
+                genres: ["Comedy", "Psychological", "Romance", "School", "Seinen"],
+                year: 2019,
+                episodes: 37,
+                synopsis: "Two brilliant students from elite families lead the student council and engage in elaborate mind games to make the other confess their love first."
+            },
+            {
+                id: 50,
+                title: "Gurren Lagann",
+                image: "https://m.media-amazon.com/images/M/MV5BMGJlODA2ZmItOTRiZS00NWM5LWJlNTQtYzI5MTNiZjA2MGFjXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.6,
+                genres: ["Action", "Adventure", "Comedy", "Mecha"],
+                year: 2007,
+                episodes: 27,
+                synopsis: "Two friends break through the surface world where humanity has been forced to live underground and embark on an adventure that will change the fate of mankind."
+            },
+            {
+                id: 51,
+                title: "Land of the Lustrous",
+                image: "https://m.media-amazon.com/images/I/91EKWaQmLKL.jpg",
+                rating: 8.4,
+                genres: ["Action", "Drama", "Fantasy", "Mystery", "Seinen"],
+                year: 2017,
+                episodes: 12,
+                synopsis: "In a world inhabited by crystalline beings called Gems, who must fight against the Lunarians who want to harvest them for decorations, the youngest Gem, Phosphophyllite, is tasked with creating an encyclopedia."
+            },
+            {
+                id: 52,
+                title: "March ComesLike Lion",
+                image: "https://m.media-amazon.com/images/M/MV5BMDJmZGZmNjQtMzE4NS00ZGRmLWFiMTQtM2EzZDhhZGNkY2FmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.6,
+                genres: ["Drama", "Game", "Seinen"],
+                year: 2016,
+                episodes: 44,
+                synopsis: "A young professional shogi player deals with depression, isolation, and finding his place in the world as he builds relationships with a family of sisters."
+            },
+            {
+                id: 53,
+                title: "Bunny Girl Senpai",
+                image: "https://m.media-amazon.com/images/M/MV5BZWRjNWY5YmItZTFkNS00ZjdiLWJiMWMtODFjYzk1NjU2MWU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.3,
+                genres: ["Comedy", "Drama", "Romance", "Supernatural"],
+                year: 2018,
+                episodes: 13,
+                synopsis: "A high school student helps girls who are experiencing a mysterious adolescence syndrome that makes them invisible to others."
+            },
+            {
+                id: 54,
+                title: "Soul Eater",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DHceMstbkYyb9YsmRVFlr_gBIyXsdlpKTA&s",
+                rating: 8.0,
+                genres: ["Action", "Comedy", "Fantasy", "Supernatural", "Shonen"],
+                year: 2008,
+                episodes: 51,
+                synopsis: "Students at Death Weapon Meister Academy train to become pairs of Meisters and human Weapons to collect evil souls and prevent the rebirth of the Kishin."
+            },
+            {
+                id: 55,
+                title: "Bakemonogatari",
+                image: "https://m.media-amazon.com/images/M/MV5BMzc2ODJmZDItNDJkYS00OWIyLTg1YWYtMmRmZjJkZDdlMTUwXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Comedy", "Drama", "Mystery", "Romance", "Supernatural"],
+                year: 2009,
+                episodes: 15,
+                synopsis: "A high school student who survived a vampire attack helps girls afflicted by supernatural phenomena related to their emotional traumas."
+            },
+            {
+                id: 56,
+                title: "Food Wars!: Shokugeki",
+                image: "https://m.media-amazon.com/images/M/MV5BNzk2NjkzNTMtZjYzNS00M2UxLWI2NGYtZDlkOTliNjZkOTk1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Comedy", "Ecchi", "School", "Shonen"],
+                year: 2015,
+                episodes: 86,
+                synopsis: "A talented young chef enrolls in an elite culinary school where students engage in cooking competitions called 'food wars' to prove their culinary abilities."
+            },
+            {
+                id: 57,
+                title: "Erased",
+                image: "https://m.media-amazon.com/images/M/MV5BZWQ2YmI5NWMtZTY2Mi00MGUxLWFhMmEtYjVjZjMwOTNkOThjXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Mystery", "Psychological", "Supernatural", "Thriller", "Seinen"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A man with the ability to travel back in time is sent back to his elementary school days to prevent a series of kidnappings and murders, including that of his classmate."
+            },
+            {
+                id: 58,
+                title: "Kill la Kill",
+                image: "https://upload.wikimedia.org/wikipedia/en/a/a9/Killlakillpromo.jpg",
+                rating: 8.1,
+                genres: ["Action", "Comedy", "Ecchi"],
+                year: 2013,
+                episodes: 24,
+                synopsis: "A girl wielding a scissor blade searches for her father's killer at a high school where special uniforms grant students superhuman powers."
+            },
+            {
+                id: 59,
+                title: "Sword Art Online",
+                image: "https://m.media-amazon.com/images/M/MV5BN2NhYzU2NDEtYzI1NS00MjgzLThjZGUtOTYxNGJkZjZmNDdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.5,
+                genres: ["Action", "Adventure", "Fantasy", "Romance"],
+                year: 2012,
+                episodes: 97,
+                synopsis: "Players of a virtual reality MMORPG are trapped inside the game and must defeat the final boss to escape, but death in-game means death in real life."
+            },
+            {
+                id: 60,
+                title: "The Rising Shield Hero",
+                image: "https://m.media-amazon.com/images/M/MV5BZjc4ZGZkNjMtZTRkYS00Mjk4LTgwMzAtMzg1MWZlZjcxNDRhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Action", "Adventure", "Drama", "Fantasy", "Isekai"],
+                year: 2019,
+                episodes: 38,
+                synopsis: "A man summoned to another world as the Shield Hero, the weakest of four heroes, must rise to protect the world after being betrayed and falsely accused of a crime."
+            },
+            {
+                id: 61,
+                title: "Hellsing Ultimate",
+                image: "https://m.media-amazon.com/images/M/MV5BZTA2OWJiYzgtZWFiOS00ZmYyLWFiMjMtYzg5YjNlMTA5NGJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Action", "Horror", "Supernatural", "Vampire", "Seinen"],
+                year: 2006,
+                episodes: 10,
+                synopsis: "The Hellsing Organization defends England from supernatural threats, primarily vampires, with the help of their most powerful weapon: the ancient vampire Alucard."
+            },
+            {
+                id: 62,
+                title: "Akira",
+                image: "https://m.media-amazon.com/images/M/MV5BM2ZiZTk1ODgtMTZkNS00NTYxLWIxZTUtNWExZGYwZTRjODViXkEyXkFqcGdeQXVyMTE2MzA3MDM@._V1_.jpg",
+                rating: 8.3,
+                genres: ["Action", "Military", "Sci-Fi", "Supernatural", "Seinen"],
+                year: 1988,
+                episodes: 1,
+                synopsis: "In a dystopian Neo-Tokyo, a biker gang member gains destructive psychic abilities after a motorcycle accident, drawing him into a government conspiracy centered around a secret project called Akira."
+            },
+            {
+                id: 63,
+                title: "Samurai Champloo",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeSTBu7pEhd6WaKnLgrI0R3rABVcBuRXcWEQ&s",
+                rating: 8.5,
+                genres: ["Action", "Adventure", "Comedy", "Historical", "Samurai"],
+                year: 2004,
+                episodes: 26,
+                synopsis: "Two skilled but very different swordsmen accompany a young woman on her quest to find the samurai who smells of sunflowers, embarking on a journey across Edo-period Japan with hip-hop influences."
+            },
+            {
+                id: 64,
+                title: "Princess Mononoke",
+                image: "https://m.media-amazon.com/images/M/MV5BNGIzY2IzODQtNThmMi00ZDE4LWI5YzAtNzNlZTM1ZjYyYjUyXkEyXkFqcGdeQXVyODEzNjM5OTQ@._V1_.jpg",
+                rating: 8.8,
+                genres: ["Action", "Adventure", "Fantasy"],
+                year: 1997,
+                episodes: 1,
+                synopsis: "A young prince gets involved in a struggle between forest gods and the humans who consume its resources, with a young woman raised by wolves caught in the middle."
+            },
+            {
+                id: 65,
+                title: "Dororo",
+                image: "https://m.media-amazon.com/images/M/MV5BYzk2ODAyZjctNjExNS00ZDk0LWE1ZDMtZmIyNzI2NjNjNjllXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Action", "Adventure", "Supernatural", "Historical"],
+                year: 2019,
+                episodes: 24,
+                synopsis: "A young man born without limbs or facial features due to his father's deal with demons hunts those demons to reclaim his body parts, accompanied by a young thief."
+            },
+            {
+                id: 66,
+                title: "Puella Magi Madoka Magica",
+                image: "https://m.media-amazon.com/images/M/MV5BMGI2NDRmZTgtYzU2NS00M2Y1LTkwMWUtNTkxNWFiNjFkYmQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Drama", "Magical Girl", "Psychological", "Thriller"],
+                year: 2011,
+                episodes: 12,
+                synopsis: "A group of magical girls discover the dark truth behind their powers and the true nature of their seemingly cute mascot character."
+            },
+            {
+                id: 67,
+                title: "Howl's Moving Castle",
+                image: "https://m.media-amazon.com/images/M/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+                rating: 8.7,
+                genres: ["Adventure", "Drama", "Fantasy", "Romance"],
+                year: 2004,
+                episodes: 1,
+                synopsis: "A young woman is cursed with an old body by a spiteful witch and must seek aid from a self-indulgent yet insecure young wizard who lives in a walking castle."
+            },
+            {
+                id: 68,
+                title: "Barakamon",
+                image: "https://m.media-amazon.com/images/M/MV5BMzdkYTgzZDctMGQ3OS00NWJlLTk1Y2ItYzZhNzIwOGM0YTU3XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Comedy", "Slice of Life"],
+                year: 2014,
+                episodes: 12,
+                synopsis: "A young calligrapher is sent to a rural island to find inspiration and rediscover his passion for his art while interacting with the island's quirky inhabitants."
+            },
+            {
+                id: 69,
+                title: "Yuri!!! on Ice",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqbuPWLsOWjd59zGj4-5RyXEtKnOKFTCsIsQ&s",
+                rating: 8.3,
+                genres: ["Comedy", "Sports", "Drama"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A Japanese figure skater is taken under the wing of his idol, a Russian champion who decides to coach him back to greatness after seeing him perform his routine."
+            },
+            {
+                id: 70,
+                title: "Kuroko's Basketball",
+                image: "https://m.media-amazon.com/images/M/MV5BYmI3NDAyZGUtYWZiZC00YWIwLTgyNDQtYjZmOGFmNTkzODYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.3,
+                genres: ["Comedy", "School", "Shounen", "Sports"],
+                year: 2012,
+                episodes: 75,
+                synopsis: "A high school basketball team aims to win the national championship with the help of an invisible player who was the phantom sixth man of a legendary middle school team."
+            },
+            {
+                id: 71,
+                title: "Noragami",
+                image: "https://m.media-amazon.com/images/M/MV5BODhhZDgxM2EtZjZhYy00ZThkLTk2NDMtNGE0YjJlMWVlMDU1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Action", "Adventure", "Comedy", "Supernatural"],
+                year: 2014,
+                episodes: 25,
+                synopsis: "A minor deity without a shrine tries to build his reputation by helping humans in need, while a schoolgirl becomes involved in his world after a near-death experience."
+            },
+            {
+                id: 72,
+                title: "Hyouka",
+                image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Hyouka_English_poster.jpg/250px-Hyouka_English_poster.jpg",
+                rating: 8.1,
+                genres: ["Mystery", "School", "Slice of Life"],
+                year: 2012,
+                episodes: 22,
+                synopsis: "An energy-conserving high school student joins the school's Classic Literature Club and gets drawn into solving mundane mysteries to satisfy his curious friend."
+            },
+            {
+                id: 73,
+                title: "Mushishi",
+                image: "https://m.media-amazon.com/images/M/MV5BMmUxZjA2ZTgtYmIzNy00YWE0LTliMjktZGY5NTQ5ZDEzYmM1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.7,
+                genres: ["Adventure", "Fantasy", "Mystery", "Seinen", "Slice of Life", "Supernatural"],
+                year: 2005,
+                episodes: 46,
+                synopsis: "A wandering researcher studies and deals with supernatural microorganisms called Mushi that often cause strange events and misfortunes for humans."
+            },
+            {
+                id: 74,
+                title: "From the New World",
+                image: "https://m.media-amazon.com/images/M/MV5BMDY4N2Y4YTgtMTlmYy00ZmY1LWFhMjktNDVkNjc4MTlhNWI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Drama", "Horror", "Mystery", "Psychological", "Sci-Fi", "Supernatural"],
+                year: 2012,
+                episodes: 25,
+                synopsis: "In a utopian society where humans have evolved psychic powers, a group of friends discover dark secrets about their world's history and the true cost of their peaceful existence."
+            },
+            {
+                id: 75,
+                title: "Toradora!",
+                image: "https://m.media-amazon.com/images/M/MV5BNjEyZmRmMGYtNGY1Zi00MTFiLWE0ZTMtNzUzMWJmMTgzNWE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Comedy", "Drama", "Romance", "School", "Slice of Life"],
+                year: 2008,
+                episodes: 25,
+                synopsis: "An intimidating boy with a kind heart and a small girl with a ferocious personality help each other pursue their respective crushes, only to develop feelings for each other."
+            },
+            {
+                id: 76,
+                title: "Ping Pong the Animation",
+                image: "https://m.media-amazon.com/images/M/MV5BNmYzMDRkMmYtZjNiZS00ZGVlLWI2NWQtMjc2NTE1OThmZTBiXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.7,
+                genres: ["Drama", "Psychological", "Seinen", "Sports"],
+                year: 2014,
+                episodes: 11,
+                synopsis: "Two friends with very different approaches to table tennis navigate their competitive high school years, dealing with victory, defeat, and what it means to be talented."
+            },
+            {
+                id: 77,
+                title: "The Disastrous Life of Saiki K.",
+                image: "https://m.media-amazon.com/images/M/MV5BMzJhYWEyMWUtZDYwNS00NTU4LTgwODItYjBlNzEwMTc5MTc2XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "School", "Shounen", "Slice of Life", "Supernatural"],
+                year: 2016,
+                episodes: 120,
+                synopsis: "A high school student with powerful psychic abilities tries to keep a low profile and live a normal life despite his extraordinary powers and the odd characters around him."
+            },
+            {
+                id: 78,
+                title: "Classroom of the Elite",
+                image: "https://m.media-amazon.com/images/M/MV5BMDg3MGVhNWUtYTQ2NS00ZDdiLTg5MTMtZmM5MjUzN2IxN2I4XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.0,
+                genres: ["Drama", "Psychological", "School"],
+                year: 2017,
+                episodes: 25,
+                synopsis: "At an elite high school where students are ranked by merit and receive different treatment accordingly, a seemingly mediocre student manipulates events behind the scenes."
+            },
+            {
+                id: 79,
+                title: "Durarara!!",
+                image: "https://m.media-amazon.com/images/M/MV5BYjE1NGIwOGEtZWFiYS00MGMxLTk2ZjMtNDQ5YzQ1YmZiNmY1XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.3,
+                genres: ["Action", "Mystery", "Supernatural"],
+                year: 2010,
+                episodes: 61,
+                synopsis: "In Tokyo's Ikebukuro district, supernatural events and urban legends intertwine with the daily lives of a diverse cast of characters, including a headless rider on a black motorcycle."
+            },
+            {
+                id: 80,
+                title: "Anohana: The Flower We Saw That Day",
+                image: "https://m.media-amazon.com/images/M/MV5BMjc3ODU0ZTctNDgzYS00OWM2LTk0MGQtMzJiZmE1OTFjZTdkXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Drama", "Slice of Life", "Supernatural"],
+                year: 2011,
+                episodes: 11,
+                synopsis: "The ghost of a childhood friend appears to a teenage shut-in, asking for help in fulfilling her forgotten wish so she can pass on to the afterlife."
+            },
+            {
+                id: 81,
+                title: "Demon Slayer: Mugen Train",
+                image: "https://m.media-amazon.com/images/M/MV5BODI2NjdlYWItMTE1ZC00YzI2LTlhZGQtNzE3NzA4MWM0ODYzXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_.jpg",
+                rating: 8.8,
+                genres: ["Action", "Supernatural", "Shonen"],
+                year: 2020,
+                episodes: 1,
+                synopsis: "Tanjiro and his friends from the Demon Slayer Corps join the Flame Hashira Kyojuro Rengoku to investigate disappearances on a train, encountering a powerful demon who targets dreams."
+            },
+            {
+                id: 82,
+                title: "Log Horizon",
+                image: "https://m.media-amazon.com/images/M/MV5BOTk2MzEwZWItYTlhYS00ZjcwLTk5N2YtOWFkYmRlYTJkOWY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.1,
+                genres: ["Action", "Adventure", "Fantasy", "Game", "Magic"],
+                year: 2013,
+                episodes: 63,
+                synopsis: "Players of a popular MMORPG find themselves trapped inside the game world, where they must establish a society and deal with the game's political and economic systems."
+            },
+            {
+                id: 83,
+                title: "The Devil is a Part-Timer!",
+                image: "https://m.media-amazon.com/images/M/MV5BODdjMWIyYjQtNzI4ZC00ZjA1LWJmYzMtYTA1ZjFiNTMxZWI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Comedy", "Demons", "Fantasy", "Romance", "Supernatural"],
+                year: 2013,
+                episodes: 25,
+                synopsis: "When a demon lord is forced to retreat from his world to modern-day Tokyo, he takes a part-time job at a fast food restaurant to survive while planning his comeback."
+            },
+            {
+                id: 84,
+                title: "Miss Kobayashi's Dragon Maid",
+                image: "https://m.media-amazon.com/images/M/MV5BZTM2MmRjOTYtMTgwNS00NDUyLTk0Y2YtNTZkMjZkOTE0OTdlXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.1,
+                genres: ["Comedy", "Fantasy", "Slice of Life"],
+                year: 2017,
+                episodes: 27,
+                synopsis: "An office worker's life is turned upside down when a dragon appears at her door, transforms into a human maid, and offers to work for her as repayment for a past kindness."
+            },
+            {
+                id: 85,
+                title: "Spice and Wolf",
+                image: "https://m.media-amazon.com/images/M/MV5BMjk2ZDI3YmYtODUwOC00NTgwLTliMzgtNzJlNTYyY2RmZDI0XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Adventure", "Fantasy", "Romance"],
+                year: 2008,
+                episodes: 25,
+                synopsis: "A traveling merchant encounters a wolf harvest deity who joins him on his journey, using her cunning to help him profit while they navigate the complex world of medieval commerce."
+            },
+            {
+                id: 86,
+                title: "Mushi-Shi Zoku Sho",
+                image: "https://m.media-amazon.com/images/M/MV5BOGE4YWYyMDgtMzRjZi00N2VlLWI4Y2QtNTcxMWEzZmUyZTdmXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.8,
+                genres: ["Adventure", "Fantasy", "Mystery", "Slice of Life", "Supernatural"],
+                year: 2014,
+                episodes: 21,
+                synopsis: "The continuation of the journey of Ginko, a traveling Mushi master who helps people deal with the supernatural Mushi that cause phenomena beyond human understanding."
+            },
+            {
+                id: 87,
+                title: "Baccano!",
+                image: "https://m.media-amazon.com/images/M/MV5BMDdkYjc2MmQtNTJlZS00ZDM4LWI0ZTYtZGNkZTgzZTg0YTNmXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Action", "Comedy", "Historical", "Mystery", "Supernatural"],
+                year: 2007,
+                episodes: 16,
+                synopsis: "Multiple storylines intersect in 1930s America, involving immortal alchemists, mafia gangsters, and thieves aboard the transcontinental train, the Flying Pussyfoot."
+            },
+            {
+                id: 88,
+                title: "Goblin Slayer",
+                image: "https://m.media-amazon.com/images/M/MV5BMTk1MGM5ZDQtMWFkZS00YTUyLWIzYWYtZTQwYWYzNzQ3MTMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.5,
+                genres: ["Action", "Adventure", "Fantasy"],
+                year: 2018,
+                episodes: 15,
+                synopsis: "A stoic adventurer specializes exclusively in killing goblins, joining a diverse group of adventurers while maintaining his single-minded pursuit of exterminating his sworn enemies."
+            },
+            {
+                id: 89,
+                title: "Great Teacher Onizuka",
+                image: "https://m.media-amazon.com/images/M/MV5BNzYwN2UyNDAtZTQ3My00ZjQ4LWE2ZmYtZDZiMTlhZGM3ZTc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.7,
+                genres: ["Comedy", "Drama", "School", "Shounen"],
+                year: 1999,
+                episodes: 43,
+                synopsis: "A former gang leader becomes a teacher to gain respect and connect with high school girls, but finds himself genuinely caring for his troubled students despite their schemes to get rid of him."
+            },
+            {
+                id: 90,
+                title: "Hinamatsuri",
+                image: "https://m.media-amazon.com/images/I/71ma5Wl-toL.jpg",
+                rating: 8.3,
+                genres: ["Comedy", "Sci-Fi", "Slice of Life", "Supernatural"],
+                year: 2018,
+                episodes: 12,
+                synopsis: "A yakuza member's life is turned upside down when a strange girl with psychokinetic powers appears in his apartment, leading to an unusual father-daughter relationship."
+            },
+            {
+                id: 91,
+                title: "Cells at Work!",
+                image: "https://m.media-amazon.com/images/M/MV5BZTNkYjAwMGQtNDMzYy00ODEzLTlhZGMtNmUxNzJiYzU0NjM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.9,
+                genres: ["Comedy", "Educational"],
+                year: 2018,
+                episodes: 21,
+                synopsis: "Anthropomorphized cells carry out their daily duties inside the human body, with a focus on a red blood cell and a white blood cell as they work to protect the body from pathogens."
+            },
+            {
+                id: 92,
+                title: "Wolf Children",
+                image: "https://upload.wikimedia.org/wikipedia/en/9/9c/%C5%8Ckami_Kodomo_no_Ame_to_Yuki_poster.jpg",
+                rating: 8.7,
+                genres: ["Slice of Life", "Fantasy", "Drama"],
+                year: 2012,
+                episodes: 1,
+                synopsis: "A young woman falls in love with a wolf-man and gives birth to two half-wolf children, raising them alone after his death and facing the challenges of their dual nature."
+            },
+            {
+                id: 93,
+                title: "Charlotte",
+                image: "https://upload.wikimedia.org/wikipedia/en/3/32/Charlotte_key.jpg",
+                rating: 7.8,
+                genres: ["Drama", "School", "Supernatural"],
+                year: 2015,
+                episodes: 13,
+                synopsis: "Teenagers develop supernatural abilities during puberty, leading a boy with the power to temporarily possess others to be recruited by a student council that protects these ability users."
+            },
+            {
+                id: 94,
+                title: "Nichijou - My Ordinary Life",
+                image: "https://m.media-amazon.com/images/M/MV5BZDVjYTVjODAtMGZjOS00NGJhLWFkOWQtMGQ2MjFhY2U2ZTQ5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "School", "Slice of Life"],
+                year: 2011,
+                episodes: 26,
+                synopsis: "The surreal everyday lives of high school girls, their teachers, and friends are depicted with absurd humor and over-the-top reactions to mundane situations."
+            },
+            {
+                id: 95,
+                title: "Chihayafuru",
+                image: "https://upload.wikimedia.org/wikipedia/en/a/a8/Chihayafuru_vol_1.jpg",
+                rating: 8.4,
+                genres: ["Drama", "Game", "Josei", "School", "Slice of Life", "Sports"],
+                year: 2011,
+                episodes: 74,
+                synopsis: "A high school girl pursues her dream of becoming the world's best karuta player, a traditional Japanese card game requiring memorization, reflexes, and strategy."
+            },
+            {
+                id: 96,
+                title: "Space Brothers",
+                image: "https://m.media-amazon.com/images/M/MV5BZGZmZjEzYzYtNTNjNS00ODhiLTljZTYtNzUwZGJiZTgzMGVlXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "Sci-Fi", "Slice of Life", "Space"],
+                year: 2012,
+                episodes: 99,
+                synopsis: "Two brothers made a childhood promise to become astronauts; years later, the younger has achieved this dream while the older begins his journey to fulfill his own."
+            },
+            {
+                id: 97,
+                title: "Serial Experiments Lain",
+                image: "https://m.media-amazon.com/images/M/MV5BZGJiMmEyMDMtMTJlZi00YTgwLWI1ODgtZDA1YjEyM2Q5MjI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Dementia", "Drama", "Mystery", "Psychological", "Sci-Fi", "Supernatural"],
+                year: 1998,
+                episodes: 13,
+                synopsis: "A shy schoolgirl receives an email from a classmate who recently committed suicide, leading her to investigate the boundaries between reality and cyberspace known as 'The Wired'."
+            },
+            {
+                id: 98,
+                title: "Black Lagoon",
+                image: "https://upload.wikimedia.org/wikipedia/en/b/b4/Black_Lagoon_01.png",
+                rating: 8.1,
+                genres: ["Action", "Seinen"],
+                year: 2006,
+                episodes: 29,
+                synopsis: "A Japanese businessman is abandoned by his company and joins a band of mercenaries operating in the crime-ridden waters of Southeast Asia."
+            },
+            {
+                id: 99,
+                title: "Aggretsuko",
+                image: "https://m.media-amazon.com/images/M/MV5BNmJiMWI4YmMtMDg4Ny00YTNmLWFlZWMtYTMyMzE3ZDg1NWJmXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.0,
+                genres: ["Comedy", "Slice of Life", "Music"],
+                year: 2018,
+                episodes: 40,
+                synopsis: "A mild-mannered red panda office worker deals with workplace frustrations by transforming into her death metal karaoke persona at night."
+            },
+            {
+                id: 100,
+                title: "Flying Witch",
+                image: "https://m.media-amazon.com/images/M/MV5BMmIxYzUzYWUtZGI4Ni00ZjVjLTgwNjUtZmI3ZTUyZWU2ZDliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Comedy", "Slice of Life", "Supernatural"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A young witch moves to the countryside to complete her training, bringing her simple and relaxed approach to witchcraft into the daily lives of her non-magical relatives."
+            },
+            {
+                id: 101,
+                title: "Blue Exorcist",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsfRS5Eqn7OdNkmimhwolGpREyRLOM5aU_7w&s",
+                rating: 7.6,
+                genres: ["Action", "Demons", "Fantasy", "Supernatural"],
+                year: 2011,
+                episodes: 37,
+                synopsis: "The son of Satan enrolls at an exorcist academy to become strong enough to defeat his biological father, while learning to control his demonic powers."
+            },
+            {
+                id: 102,
+                title: "Devilman Crybaby",
+                image: "https://m.media-amazon.com/images/M/MV5BMjRjOGI4M2YtMGQ4NC00OTk3LTg4MWItYjBjYzNiOGI0Y2ZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.9,
+                genres: ["Action", "Demons", "Horror", "Psychological", "Supernatural"],
+                year: 2018,
+                episodes: 10,
+                synopsis: "A kind-hearted boy becomes merged with a powerful demon, using his new powers to battle evil while struggling to maintain his humanity in a world descending into chaos."
+            },
+            {
+                id: 103,
+                title: "Grimgar of Fantasy and Ash",
+                image: "https://m.media-amazon.com/images/M/MV5BMmUyNzNmMDEtNjYzYi00ZDcwLTg4NTQtZTUzYzBiZTYwNzYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Action", "Adventure", "Drama", "Fantasy"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A group of strangers find themselves in a fantasy world with no memories of their previous lives, forced to learn basic survival skills as novice adventurers."
+            },
+            {
+                id: 104,
+                title: "My Dress-Up Darling",
+                image: "https://m.media-amazon.com/images/M/MV5BYmJhYjgzYTQtMzMxYi00NTkyLWI2MWItNTgxNjk1NzU0YmQzXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Comedy", "Romance", "Slice of Life"],
+                year: 2022,
+                episodes: 12,
+                synopsis: "A high school boy skilled at making traditional dolls forms an unlikely friendship with a trendy classmate when he agrees to help her create cosplay costumes."
+            },
+            {
+                id: 105,
+                title: "The Garden of Words",
+                image: "https://m.media-amazon.com/images/M/MV5BYjdiMDdlMDItOGM4Ny00YmE4LTk0MTEtMGRhM2Y4OWZkZDZkXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.9,
+                genres: ["Drama", "Romance", "Slice of Life"],
+                year: 2013,
+                episodes: 1,
+                synopsis: "A 15-year-old student who dreams of becoming a shoemaker meets a mysterious 27-year-old woman during rainy mornings in a Tokyo garden, forming an unusual connection."
+            },
+            {
+                id: 106,
+                title: "Silver Spoon",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/0d/Silver_Spoon_%28manga%29_1.png",
+                rating: 8.2,
+                genres: ["Comedy", "School", "Slice of Life"],
+                year: 2013,
+                episodes: 22,
+                synopsis: "An academically gifted city boy enrolls in an agricultural high school to escape the pressures of his previous life, learning about farming, animals, and food production."
+            },
+            {
+                id: 107,
+                title: "Terror in Resonance",
+                image: "https://m.media-amazon.com/images/M/MV5BOGZmNjNiY2MtNWE0YS00Y2MxLWJlNzEtMjIyMzZjODE5NGMwXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.1,
+                genres: ["Mystery", "Psychological", "Thriller"],
+                year: 2014,
+                episodes: 11,
+                synopsis: "Two teenage boys carrying out a series of terrorist attacks across Tokyo while being tracked by a brilliant but socially isolated detective and a determined police officer."
+            },
+            {
+                id: 108,
+                title: "Megalo Box",
+                image: "https://m.media-amazon.com/images/M/MV5BODQwZGFkODktZDk4MS00MTY2LWIzOTgtNTc5YjM4YTAxMjcwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Action", "Drama", "Sci-Fi", "Slice of Life", "Sports"],
+                year: 2018,
+                episodes: 26,
+                synopsis: "In a futuristic boxing competition where fighters use mechanical enhancements, an underground boxer fights his way to the top league to challenge the champion."
+            },
+            {
+                id: 109,
+                title: "Higurashi: When They Cry",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRTNoJn0RK7B22PxyBqkPJJfYZRD6OC3kFYA&s",
+                rating: 8.1,
+                genres: ["Horror", "Mystery", "Psychological", "Supernatural", "Thriller"],
+                year: 2006,
+                episodes: 50,
+                synopsis: "In a seemingly peaceful rural village, a group of friends become entangled in a series of mysterious and gruesome deaths that repeat in different patterns."
+            },
+            {
+                id: 110,
+                title: "Kino's Journey",
+                image: "https://m.media-amazon.com/images/M/MV5BYjdjZmMwODQtZTU4YS00YWQ3LTg2NzktNjZiZjZhNGMwNWZhXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.2,
+                genres: ["Action", "Adventure", "Slice of Life"],
+                year: 2003,
+                episodes: 14,
+                synopsis: "A traveler and their talking motorcycle explore different countries, each with unique customs and societies, staying only three days in each place to observe rather than judge."
+            },
+            {
+                id: 111,
+                title: "The Tatami Galaxy",
+                image: "https://m.media-amazon.com/images/M/MV5BYTVhODhhMDMtNzRiYS00MjI1LWEwNmEtZWM0N2NiOTk1NzYzXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "Mystery", "Psychological", "Romance"],
+                year: 2010,
+                episodes: 11,
+                synopsis: "A college student relives his last two years of school multiple times, exploring different club activities and relationships in search of his ideal rose-colored campus life."
+            },
+            {
+                id: 112,
+                title: "Megalobox 2: Nomad",
+                image: "https://pics.filmaffinity.com/Nomad_Megalo_Box_2_TV_Series-553838889-large.jpg",
+                rating: 8.5,
+                genres: ["Action", "Drama", "Sci-Fi", "Sports"],
+                year: 2021,
+                episodes: 13,
+                synopsis: "Seven years after the events of Megalonia, a wandering Joe lives in self-imposed exile before being drawn back into the world of boxing to face his past and forge a new future."
+            },
+            {
+                id: 113,
+                title: "Tsuki ga Kirei",
+                image: "https://m.media-amazon.com/images/M/MV5BNjBhOGVkN2MtMzQwZC00ZTI1LTlmMzgtN2RhZDVkNWE0ZDFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Romance", "School"],
+                year: 2017,
+                episodes: 12,
+                synopsis: "Two shy middle school students develop feelings for each other and navigate their first romance while dealing with the complexities of adolescence and future aspirations."
+            },
+            {
+                id: 114,
+                title: "Planetes",
+                image: "https://m.media-amazon.com/images/M/MV5BYjgyNTlmOGItMzViNi00NzlhLThhN2QtYTVlNjYwN2ZlYmI2XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.3,
+                genres: ["Drama", "Romance", "Sci-Fi", "Space", "Seinen"],
+                year: 2003,
+                episodes: 26,
+                synopsis: "In the year 2075, a team collects dangerous space debris, while a young woman dreams of captaining the first deep-space exploration vessel."
+            },
+            {
+                id: 115,
+                title: "Perfect Blue",
+                image: "https://m.media-amazon.com/images/M/MV5BMzAwNDIzMzEtZDZkNC00ZDQ4LTk3ZDMtZjVhMTU2YzgzZTZiXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Dementia", "Drama", "Horror", "Psychological", "Thriller"],
+                year: 1997,
+                episodes: 1,
+                synopsis: "A pop idol retires to pursue acting, but begins to lose her grip on reality as she is stalked by an obsessive fan and her mind becomes increasingly unstable."
+            },
+            {
+                id: 116,
+                title: "Kaiji: Ultimate Survivor",
+                image: "https://m.media-amazon.com/images/M/MV5BZDVkNjUzY2ItODIwZi00Yjg1LWExNzQtMWMyNzEwZDhkNzJiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.3,
+                genres: ["Game", "Psychological", "Seinen", "Thriller"],
+                year: 2007,
+                episodes: 52,
+                synopsis: "A deadbeat gambler is given the opportunity to clear his massive debt by participating in high-stakes games where his life is on the line."
+            },
+            {
+                id: 117,
+                title: "Kids on the Slope",
+                image: "https://m.media-amazon.com/images/M/MV5BN2ZlNGNjZGYtOGUwNC00NmQ1LWI0MGItNzVjYmQxMjNmNWIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Drama", "Music", "Romance", "School", "Josei"],
+                year: 2012,
+                episodes: 12,
+                synopsis: "In 1960s Japan, a classical pianist transfers to a new school and forms an unlikely friendship with a delinquent drummer, bonding through their love of jazz music."
+            },
+            {
+                id: 118,
+                title: "Konosuba",
+                image: "https://m.media-amazon.com/images/M/MV5BNTQ5NzJjMjgtNDliNC00YTdmLWJiOTQtYWRiMzY4OWU5NGQ3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.1,
+                genres: ["Adventure", "Comedy", "Fantasy", "Isekai"],
+                year: 2016,
+                episodes: 22,
+                synopsis: "After dying a laughable death, a shut-in gamer is given the chance to be reborn in a fantasy world, where he forms a dysfunctional party with a useless goddess, explosion-obsessed mage, and masochistic crusader."
+            },
+            {
+                id: 119,
+                title: "Redline",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Nn8K1wm9IBxGu6Wq5ELRSQC09t8guVmfXQ&s",
+                rating: 8.2,
+                genres: ["Action", "Cars", "Sci-Fi", "Sports"],
+                year: 2009,
+                episodes: 1,
+                synopsis: "A daredevil driver competes in the galaxy's most dangerous and illegal race, risking everything for glory and the chance to win the heart of a fellow racer."
+            },
+            {
+                id: 120,
+                title: "Beastars",
+                image: "https://m.media-amazon.com/images/M/MV5BZDRlMDA0MTctYjNmYy00MzRhLWEwYjEtYmYxZTI5YTdjMTgyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Drama", "Mystery", "Psychological", "Slice of Life"],
+                year: 2019,
+                episodes: 24,
+                synopsis: "In a world of anthropomorphic animals divided between herbivores and carnivores, a wolf theater student falls in love with a rabbit classmate while investigating a murder at his school."
+            },
+            {
+                id: 121,
+                title: "One Week Friends",
+                image: "https://m.media-amazon.com/images/M/MV5BYzdiMjRiMGUtYmNmYy00MWZkLTk1YmQtZTc2MzI3MGI0YjFjXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.7,
+                genres: ["Comedy", "Drama", "School", "Shounen", "Slice of Life"],
+                year: 2014,
+                episodes: 12,
+                synopsis: "A high school boy befriends a girl whose memory of her friends resets every Monday, requiring him to rebuild their friendship every week."
+            },
+            {
+                id: 122,
+                title: "Mononoke",
+                image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Princess_Mononoke_Japanese_poster.png/250px-Princess_Mononoke_Japanese_poster.png",
+                rating: 8.5,
+                genres: ["Demons", "Fantasy", "Horror", "Mystery", "Supernatural"],
+                year: 2007,
+                episodes: 12,
+                synopsis: "A mysterious medicine seller travels through feudal Japan exorcising malevolent spirits called Mononoke after learning their Form, Truth, and Reason to draw his sword."
+            },
+            {
+                id: 123,
+                title: "ID: Invaded",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeYjSt02v6EnAzd5zWC1TOlkKR-3cmabuRcw&s",
+                rating: 7.9,
+                genres: ["Mystery", "Police", "Psychological", "Sci-Fi"],
+                year: 2020,
+                episodes: 13,
+                synopsis: "Detectives use experimental technology to enter the unconscious minds and id wells of murderers to solve crimes, led by a brilliant detective with a criminal past."
+            },
+            {
+                id: 124,
+                title: "Bloom Into You",
+                image: "https://m.media-amazon.com/images/M/MV5BODNlZGZmZjktNWEwNy00MTJlLWFiY2YtMDA1ZjQ5NDVkZTQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Drama", "Romance", "School", "Shoujo Ai", "Slice of Life"],
+                year: 2018,
+                episodes: 13,
+                synopsis: "A high school girl who has never felt romantic love meets the seemingly perfect student council president, leading to a complex relationship as they discover their feelings for each other."
+            },
+            {
+                id: 125,
+                title: "Angel Beats!",
+                image: "https://m.media-amazon.com/images/M/MV5BN2NlOWI5OTMtODRhZi00NjY3LTljZTUtYTQwZTMxOTBjNzE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.1,
+                genres: ["Action", "Comedy", "Drama", "School", "Supernatural"],
+                year: 2010,
+                episodes: 13,
+                synopsis: "In a high school limbo between life and heaven, a group of dead teenagers rebel against moving on, fighting against a seemingly emotionless girl they call Angel."
+            },
+            {
+                id: 126,
+                title: "The Ancient Magus' Bride",
+                image: "https://m.media-amazon.com/images/M/MV5BZjUzM2U3YjctMDg5My00NTE3LWE5ZGUtOTRkYWJlM2YyOTk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Fantasy", "Magic", "Romance", "Slice of Life"],
+                year: 2017,
+                episodes: 24,
+                synopsis: "A young orphan with the ability to see magical creatures is purchased at an auction by a powerful non-human mage who names her his apprentice and future bride."
+            },
+            {
+                id: 127,
+                title: "Yona of the Dawn",
+                image: "https://m.media-amazon.com/images/M/MV5BOTc2ZDMxY2UtMjhmOS00ZjcxLTg5MDMtMmU0NDg0OTY4ZmUxXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.2,
+                genres: ["Action", "Adventure", "Comedy", "Fantasy", "Romance", "Shoujo"],
+                year: 2014,
+                episodes: 24,
+                synopsis: "A princess is forced to flee her kingdom after her father is murdered by her beloved cousin, embarking on a journey to find legendary dragon warriors to reclaim her kingdom."
+            },
+            {
+                id: 128,
+                title: "After the Rain",
+                image: "https://m.media-amazon.com/images/M/MV5BMTM3Y2RjYzAtNDRiNC00OTMzLWIzOGYtMzUyYzhjNzIyM2FmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.6,
+                genres: ["Drama", "Romance", "Seinen", "Slice of Life"],
+                year: 2018,
+                episodes: 12,
+                synopsis: "A 17-year-old high school student and former track runner develops feelings for her 45-year-old manager at the family restaurant where she works part-time."
+            },
+            {
+                id: 129,
+                title: "Shouwa Genroku Rakugo Shinjuu",
+                image: "https://m.media-amazon.com/images/M/MV5BY2NjMmMzNWYtMTc3My00YmJhLThhMTYtNTliNjBiZDMwZTZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.7,
+                genres: ["Drama", "Josei", "Historical"],
+                year: 2016,
+                episodes: 25,
+                synopsis: "The story follows the life of a former prisoner who becomes an apprentice to a master of rakugo, a form of Japanese comedic storytelling, exploring complex adult relationships and artistic passion."
+            },
+            {
+                id: 130,
+                title: "Honey and Clover",
+                image: "http://m.media-amazon.com/images/M/MV5BZTc3OTVlZDgtNmVlNS00OGQwLTk1ZDktMjYzZGI3MGVkMzVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Drama", "Romance", "Slice of Life", "Josei"],
+                year: 2005,
+                episodes: 36,
+                synopsis: "A group of art college students navigate the complicated path of finding themselves and exploring unrequited love as they prepare to enter adulthood."
+            },
+            {
+                id: 131,
+                title: "Natsuyuki Rendezvous",
+                image: "https://m.media-amazon.com/images/M/MV5BZTU1MjNjNjQtZDJiMi00YmMxLWFlMTEtN2U2YzZkMWYxYWEzXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.4,
+                genres: ["Drama", "Josei", "Romance", "Supernatural"],
+                year: 2012,
+                episodes: 11,
+                synopsis: "A young man falls in love with the older owner of a flower shop, but must deal with the lingering ghost of her deceased husband who refuses to let her go."
+            },
+            {
+                id: 132,
+                title: "Scum's Wish",
+                image: "https://m.media-amazon.com/images/M/MV5BYmViYjA4NDktOGNkMS00ZDZiLTllZjctNjgzNjcwOWU1MWUwXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Romance", "Psychological", "Seinen"],
+                year: 2017,
+                episodes: 12,
+                synopsis: "Two high school students use each other as physical substitutes for the people they truly love, exploring the darker, more selfish aspects of unrequited feelings."
+            },
+            {
+                id: 133,
+                title: "Given",
+                image: "https://m.media-amazon.com/images/M/MV5BMWI1OWY1NzgtZTg3MS00NjJjLWIxMGQtMzAzNGFlNmMxNTExXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.3,
+                genres: ["Drama", "Music", "Romance", "Slice of Life", "Boys' Love"],
+                year: 2019,
+                episodes: 11,
+                synopsis: "A heartfelt story about a boy who learns to play guitar with the help of a fellow student who is still coming to terms with the suicide of his previous boyfriend."
+            },
+            {
+                id: 134,
+                title: "Sing 'Yesterday' for Me",
+                image: "https://m.media-amazon.com/images/M/MV5BZmRlYWE3YjMtNDIxOC00ZTIxLTgyODUtODVjMzkwMTllNjg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.5,
+                genres: ["Drama", "Romance", "Slice of Life", "Seinen"],
+                year: 2020,
+                episodes: 12,
+                synopsis: "A group of young adults navigate the uncertainties of life after college, dealing with unrequited love and the struggle to find purpose in an increasingly complex world."
+            },
+            {
+                id: 135,
+                title: "My Roommate is a Cat",
+                image: "https://m.media-amazon.com/images/M/MV5BYjlkNjI0YzMtMmVmNy00NzdiLWE2N2EtZmJkYWFiOWY5N2YyXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.7,
+                genres: ["Comedy", "Slice of Life"],
+                year: 2019,
+                episodes: 12,
+                synopsis: "A socially awkward novelist adopts a cat after his parents' death, slowly opening himself to new experiences and human connections through his relationship with the stray."
+            },
+            {
+                id: 136,
+                title: "Orange",
+                image: "https://m.media-amazon.com/images/M/MV5BZDFiMTFkOWItMTY3ZC00M2VhLWE5ZGUtNWVlMTc5ZWRiODNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Romance", "Sci-Fi", "Shoujo"],
+                year: 2016,
+                episodes: 13,
+                synopsis: "A high school girl receives letters from her future self instructing her on how to prevent her close friend's suicide."
+            },
+            {
+                id: 137,
+                title: "Aku no Hana",
+                image: "https://upload.wikimedia.org/wikipedia/en/5/5c/Aku_no_hana_volume_1_cover.jpg",
+                rating: 7.2,
+                genres: ["Drama", "Psychological", "Romance", "School"],
+                year: 2013,
+                episodes: 13,
+                synopsis: "A middle school student steals the gym clothes of his crush and gets caught by a classmate who blackmails him into a 'contract' relationship."
+            },
+            {
+                id: 138,
+                title: "Just Because!",
+                image: "https://m.media-amazon.com/images/M/MV5BN2YxNTEzY2QtYmJlMi00NjhkLWIwZmQtZTdlZGI2ZWExNmY2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.6,
+                genres: ["Drama", "Romance", "School", "Slice of Life"],
+                year: 2017,
+                episodes: 12,
+                synopsis: "As high school students prepare for graduation, a transfer student's arrival disrupts the relationship dynamics within a group of friends."
+            },
+            {
+                id: 139,
+                title: "Nana",
+                image: "https://m.media-amazon.com/images/M/MV5BYjRmOWJmMDgtYjBjMS00OTg1LWJmZTItZTY2MjJlODgxNmUwXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "Drama", "Music", "Romance", "Shoujo", "Slice of Life"],
+                year: 2006,
+                episodes: 47,
+                synopsis: "Two young women with the same name but very different personalities form an unlikely friendship as they navigate love, careers, and adulthood."
+            },
+            {
+                id: 140,
+                title: "I Want to Eat Your Pancreas",
+                image: "https://m.media-amazon.com/images/M/MV5BMTQ1ODIzOGQtOGFkZC00MWViLTgyYmUtNWJkNmIxZjYxMTdmXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.5,
+                genres: ["Drama", "Romance"],
+                year: 2018,
+                episodes: 1,
+                synopsis: "An antisocial boy forms a bond with a popular girl who's hiding her terminal pancreatic disease from their classmates."
+            },
+            {
+                id: 141,
+                title: "ReLIFE",
+                image: "https://m.media-amazon.com/images/M/MV5BOGViMzRkYzctM2IyNi00OWFmLTliMDMtNjk1MmE0M2QyM2I1XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.1,
+                genres: ["Drama", "Romance", "School", "Slice of Life"],
+                year: 2016,
+                episodes: 17,
+                synopsis: "A 27-year-old unemployed man is offered a pill that transforms him into a 17-year-old, giving him a second chance at high school life."
+            },
+            {
+                id: 142,
+                title: "Usagi Drop",
+                image: "https://m.media-amazon.com/images/M/MV5BMTM5OTJmZDAtYWRlZi00ZDYxLThiZmItODM3MjNlNDVkMTE4XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Josei", "Slice of Life"],
+                year: 2011,
+                episodes: 11,
+                synopsis: "A 30-year-old single man suddenly becomes the guardian of his deceased grandfather's 6-year-old illegitimate daughter."
+            },
+            {
+                id: 143,
+                title: "Kokoro Connect",
+                image: "https://m.media-amazon.com/images/M/MV5BODY1NDljZDYtN2RkOS00N2ZkLWFhNGMtOTNiOWY4ZDg3NDczXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Romance", "School", "Supernatural"],
+                year: 2012,
+                episodes: 17,
+                synopsis: "Five high school club members experience strange phenomena that force them to share each other's innermost feelings and bring them closer."
+            },
+            {
+                id: 144,
+                title: "Paradise Kiss",
+                image: "https://m.media-amazon.com/images/M/MV5BZmUzZGIyYzMtZmEwOC00MGIwLThmOTQtNGQ0NjQ4YTk4OGIxXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.0,
+                genres: ["Drama", "Josei", "Romance"],
+                year: 2005,
+                episodes: 12,
+                synopsis: "A strait-laced high school student's life changes when she's recruited to be a model by a group of fashion design students."
+            },
+            {
+                id: 145,
+                title: "Nodame Cantabile",
+                image: "https://m.media-amazon.com/images/M/MV5BYzQ2MTc1YTgtZTIwYS00YjJlLTllMjItZDY4NTU3ZGE5Nzc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Comedy", "Drama", "Josei", "Music", "Romance"],
+                year: 2007,
+                episodes: 45,
+                synopsis: "A perfectionist music student meets an eccentric pianist with a completely different approach to music, changing both their lives."
+            },
+            {
+                id: 146,
+                title: "Oregairu",
+                image: "https://i0.wp.com/img1.ak.crunchyroll.com/i/spire2/320673efcacdbdb0d6222156f8d797ce1476015938_full.jpg",
+                rating: 8.2,
+                genres: ["Comedy", "Drama", "Romance", "School", "Slice of Life"],
+                year: 2013,
+                episodes: 38,
+                synopsis: "A loner with a distorted view of society is forced to join a school club that helps students with their problems."
+            },
+            {
+                id: 147,
+                title: "Haibane Renmei",
+                image: "https://m.media-amazon.com/images/M/MV5BZjRlOTZiY2MtZTJiMy00Y2E0LTlhZDAtNTI0ZTRmZWQ2YjdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.2,
+                genres: ["Drama", "Fantasy", "Mystery", "Slice of Life"],
+                year: 2002,
+                episodes: 13,
+                synopsis: "A girl hatches from a cocoon with no memories and becomes part of a community of angel-like beings called Haibane, searching for meaning and purpose."
+            },
+            {
+                id: 148,
+                title: "Welcome to the NHK",
+                image: "https://m.media-amazon.com/images/M/MV5BMDNjZDMyYTctMmZlMi00NDY2LTg1OGQtOTA2MWU0N2E1M2ZkXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Comedy", "Drama", "Psychological", "Romance"],
+                year: 2006,
+                episodes: 24,
+                synopsis: "A college dropout and hikikomori believes he's the victim of a conspiracy as he struggles with unemployment, isolation, and social anxiety."
+            },
+            {
+                id: 149,
+                title: "Planetarian",
+                image: "https://m.media-amazon.com/images/M/MV5BNThlMGMzZjctMmUzMy00M2MzLWE5ZmYtZjUzYzFhYjRlYTFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.5,
+                genres: ["Drama", "Sci-Fi"],
+                year: 2016,
+                episodes: 5,
+                synopsis: "In a post-apocalyptic world, a junker encounters a robot still faithfully operating a planetarium despite humanity's downfall."
+            },
+            {
+                id: 150,
+                title: "Maquia: When the Promised Flower Blooms",
+                image: "https://m.media-amazon.com/images/M/MV5BNjY5YWZhMzItMDA1OS00NjllLTgxOWUtZWU3YTQwOTE3ZThhXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Drama", "Fantasy"],
+                year: 2018,
+                episodes: 1,
+                synopsis: "An immortal woman raises a human child, experiencing the joy and heartbreak of motherhood while knowing she will outlive him."
+            },
+            {
+                id: 151,
+                title: "In This Corner of the World",
+                image: "https://m.media-amazon.com/images/M/MV5BOTQ5YTljZTItYmY0Yy00NmEyLTg3Y2QtNTM0MGQwNjMyZjdlXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.3,
+                genres: ["Drama", "Historical", "Slice of Life"],
+                year: 2016,
+                episodes: 1,
+                synopsis: "A young woman's daily life in wartime Japan, as she navigates marriage, family, and the hardships of World War II."
+            },
+            {
+                id: 152,
+                title: "Wandering Son",
+                image: "https://m.media-amazon.com/images/M/MV5BZGU5MzhkNDYtMzZmNy00N2E2LWIzNzAtNTI0ZjJiZWRkN2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "School", "Slice of Life"],
+                year: 2011,
+                episodes: 11,
+                synopsis: "Two middle school students with gender dysphoria navigate puberty and their emerging identities while supporting each other."
+            },
+            {
+                id: 153,
+                title: "Golden Time",
+                image: "https://m.media-amazon.com/images/M/MV5BNGI0YjdmNGYtZTQ0OC00OWUzLTg2NWMtMjFhNGI1Y2IxNzdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Comedy", "Drama", "Romance"],
+                year: 2013,
+                episodes: 24,
+                synopsis: "A college freshman with amnesia from an accident tries to form new relationships while struggling with his forgotten past."
+            },
+            {
+                id: 154,
+                title: "Honey and Clover II",
+                image: "https://m.media-amazon.com/images/M/MV5BYmE4MGMxNjUtOWZjZC00NTZmLWFkYzMtNjMxMDVhZmJmYTIyXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.2,
+                genres: ["Drama", "Romance", "Slice of Life", "Josei"],
+                year: 2006,
+                episodes: 12,
+                synopsis: "The continuation of the story about art college students navigating early adulthood, unrequited love, and finding their paths."
+            },
+            {
+                id: 155,
+                title: "White Album 2",
+                image: "https://m.media-amazon.com/images/M/MV5BNTFmMDlkMTctM2Y1NC00ODMzLWE0MTEtZmU2MjM2YzRhNjBlXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.9,
+                genres: ["Drama", "Music", "Romance", "Slice of Life"],
+                year: 2013,
+                episodes: 13,
+                synopsis: "Three musically talented students form a complicated love triangle as they prepare for their school's festival performance."
+            },
+            {
+                id: 156,
+                title: "Hanasaku Iroha",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC0mKanZFZv5cFuSINK8QuWT8S-F29PLjtDg&s",
+                rating: 8.0,
+                genres: ["Comedy", "Drama", "Slice of Life"],
+                year: 2011,
+                episodes: 26,
+                synopsis: "A city girl is sent to work at her grandmother's traditional Japanese inn, learning about responsibility and finding her purpose."
+            },
+            {
+                id: 157,
+                title: "5 Centimeters per Second",
+                image: "https://m.media-amazon.com/images/M/MV5BODVmZjhhYTYtYzRiOC00YzFiLThlZjMtZTQxNWY0MTI1MzlmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Romance", "Slice of Life"],
+                year: 2007,
+                episodes: 3,
+                synopsis: "Childhood friends grow apart over time and distance, exploring how relationships change as people mature and move forward."
+            },
+            {
+                id: 158,
+                title: "Sound! Euphonium",
+                image: "https://m.media-amazon.com/images/M/MV5BMDlmMjIzZTItNDY5MC00MGNhLTliMWMtMTUzMzQwMGVkOWFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Drama", "Music", "School"],
+                year: 2015,
+                episodes: 26,
+                synopsis: "A high school concert band strives for national competition as the members deal with personal growth, rivalry, and dedication to music."
+            },
+            {
+                id: 159,
+                title: "Tari Tari",
+                image: "https://m.media-amazon.com/images/M/MV5BYTI0YWVkYjgtYjg1My00N2IyLTk0ZjUtMmNlMWZmMTA4ZDczXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.5,
+                genres: ["Music", "School", "Slice of Life"],
+                year: 2012,
+                episodes: 13,
+                synopsis: "Five high school students form a choir club in their final year, each seeking to accomplish something meaningful before graduation."
+            },
+            {
+                id: 160,
+                title: "Nagi no Asukara",
+                image: "https://m.media-amazon.com/images/M/MV5BNTQ5NmEyMDQtNDA5Zi00ZTRiLWEzZWEtOWJmODUwYTllYTJiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.0,
+                genres: ["Drama", "Fantasy", "Romance"],
+                year: 2013,
+                episodes: 26,
+                synopsis: "Four middle school students from an underwater village must attend school on land, navigating tensions between sea and land peoples while experiencing first love."
+            },
+            {
+                id: 161,
+                title: "Bunny Drop",
+                image: "https://m.media-amazon.com/images/M/MV5BMTM5OTJmZDAtYWRlZi00ZDYxLThiZmItODM3MjNlNDVkMTE4XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.2,
+                genres: ["Josei", "Slice of Life"],
+                year: 2011,
+                episodes: 11,
+                synopsis: "A 30-year-old bachelor adopts his grandfather's illegitimate 6-year-old daughter, learning to be a parent while they build a new life together."
+            },
+            {
+                id: 162,
+                title: "Anthem of the Heart",
+                image: "https://m.media-amazon.com/images/M/MV5BZTRkZGU0ZDUtMzFhYi00YjFiLWI2ZDUtODVjYzg0ZWQ0ZTcwXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Romance", "School"],
+                year: 2015,
+                episodes: 1,
+                synopsis: "A girl who sealed away her ability to speak after a traumatic childhood experience joins a community outreach club and begins to heal through music."
+            },
+            {
+                id: 163,
+                title: "A Place Further Than the Universe",
+                image: "https://m.media-amazon.com/images/M/MV5BNmQzYjI2NjgtMDY1Yy00OWViLWE3NjUtZmQxZTYwMzRhYzY1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.6,
+                genres: ["Adventure", "Comedy", "Drama"],
+                year: 2018,
+                episodes: 13,
+                synopsis: "Four high school girls form an unlikely friendship as they embark on a journey to Antarctica, each seeking something they've lost."
+            },
+            {
+                id: 164,
+                title: "Plastic Memories",
+                image: "https://m.media-amazon.com/images/M/MV5BZmM1Yjc3MjItMjk4NC00NmEwLWIyOWYtMmM4ODU5NDM0MDZmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.9,
+                genres: ["Drama", "Romance", "Sci-Fi"],
+                year: 2015,
+                episodes: 13,
+                synopsis: "In a future where androids with limited lifespans live alongside humans, a young man works at a terminal service retrieving androids at the end of their life cycles."
+            },
+            {
+                id: 165,
+                title: "Poco's Udon World",
+                image: "https://m.media-amazon.com/images/M/MV5BZDkzN2M2NDYtNGY0ZC00NjBlLWIwNmQtNGI1ZThmMzQ3MzgyXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.6,
+                genres: ["Fantasy", "Slice of Life"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A web designer returns to his rural hometown after his father's death and finds a mysterious tanuki child who changes his outlook on life."
+            },
+            {
+                id: 166,
+                title: "Fruits Basket (2019)",
+                image: "https://m.media-amazon.com/images/M/MV5BZjZmNjg3ZjMtZjQ0MS00NDE0LWE0MDctZTBjMDZiMWZhZTk3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.5,
+                genres: ["Comedy", "Drama", "Romance", "Supernatural"],
+                year: 2019,
+                episodes: 63,
+                synopsis: "An orphaned girl moves in with a family cursed to transform into zodiac animals when hugged by members of the opposite sex."
+            },
+            {
+                id: 167,
+                title: "Shirobako",
+                image: "https://m.media-amazon.com/images/M/MV5BZjMyY2U4ZTMtODAwMi00NGM1LWFhYWYtNjY5ZmIzNThmZDc1XkEyXkFqcGc@._V1_.jpg",
+                rating: 8.4,
+                genres: ["Comedy", "Drama", "Slice of Life"],
+                year: 2014,
+                episodes: 24,
+                synopsis: "Five friends pursue their dream careers in the anime industry, facing the realities and challenges of creative production work."
+            },
+            {
+                id: 168,
+                title: "House of Five Leaves",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVpqhC7oXjODEhfPNxqCQxlFfakhT2saRp6g&s",
+                rating: 7.7,
+                genres: ["Drama", "Historical", "Samurai", "Seinen"],
+                year: 2010,
+                episodes: 12,
+                synopsis: "A timid ronin is recruited into a gang of kidnappers, gradually becoming involved in their complex lives and motivations."
+            },
+            {
+                id: 169,
+                title: "Tanaka-kun is Always Listless",
+                image: "https://m.media-amazon.com/images/M/MV5BMDdhNzlmYTAtZTQzNi00MWY0LTk5YTItYzUzMGVmODQ5N2UxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.9,
+                genres: ["Comedy", "School", "Slice of Life"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A perpetually exhausted high school student and his energetic friend navigate daily life with their contrasting personalities."
+            },
+            {
+                id: 170,
+                title: "Laid-Back Camp",
+                image: "https://m.media-amazon.com/images/M/MV5BOTk2NzZjNzctMDEyZC00MDdlLTk3M2EtNGNmYmJlZWU4ZGQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.3,
+                genres: ["Comedy", "Slice of Life"],
+                year: 2018,
+                episodes: 25,
+                synopsis: "High school girls discover the joy of camping, exploring scenic locations and forming meaningful friendships around campfires."
+            },
+            {
+                id: 171,
+                title: "Ef: A Tale of Memories",
+                image: "https://m.media-amazon.com/images/M/MV5BODkxZWFlMmQtMDAyNi00ODcxLTliZTUtOTgwZWEyNTYzOGQ2XkEyXkFqcGc@._V1_.jpg",
+                rating: 7.9,
+                genres: ["Drama", "Mystery", "Romance"],
+                year: 2007,
+                episodes: 12,
+                synopsis: "Intertwining stories of several couples dealing with love, loss, and memory as they navigate their complicated relationships."
+            },
+            {
+                id: 172,
+                title: "Kimi ni Todoke",
+                image: "https://upload.wikimedia.org/wikipedia/en/9/9a/Kimi_ni_Todoke_vol_1.jpg",
+                rating: 8.0,
+                genres: ["Romance", "School", "Shoujo", "Slice of Life"],
+                year: 2009,
+                episodes: 38,
+                synopsis: "A misunderstood girl who resembles a horror movie character slowly forms friendships and experiences first love with the most popular boy in school."
+            },
+            {
+                id: 173,
+                title: "Colorful",
+                image: "https://m.media-amazon.com/images/M/MV5BYTM0NTcyNGMtNjNkMy00OGFkLTkwZjMtNDEyOWI3YmUyZWZkXkEyXkFqcGc@._V1_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Slice of Life", "Supernatural"],
+                year: 2010,
+                episodes: 1,
+                synopsis: "A soul is given a second chance at life in the body of a boy who committed suicide, tasked with discovering what great sin it committed in its previous life."
+            },
+            {
+                id: 174,
+                title: "Natsume's Book of Friends",
+                image: "https://m.media-amazon.com/images/M/MV5BZjc3ODdlZmMtYjlhMy00Zjg4LThiNDYtYWYyODkyYTUzYTI0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.4,
+                genres: ["Drama", "Slice of Life", "Supernatural"],
+                year: 2008,
+                episodes: 74,
+                synopsis: "A boy who can see spirits inherits his grandmother's book containing the names of yokai she defeated, choosing to free them from their contracts."
+            },
+            {
+                id: 175,
+                title: "Aoi Bungaku Series",
+                image: "https://m.media-amazon.com/images/M/MV5BYmEyZGRiZWItMTczMC00OGNjLTkwOGItNzUwOTBkZWUzNjU2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Drama", "Psychological", "Thriller"],
+                year: 2009,
+                episodes: 12,
+                synopsis: "Animated adaptations of classic Japanese literature exploring dark themes of human nature, depression, and existential crises."
+            },
+            {
+                id: 176,
+                title: "Millennium Actress",
+                image: "http://m.media-amazon.com/images/M/MV5BZjcwZDFlMTgtN2Q1Ny00MTgxLTk5OGItNTllMDg3MjE0NjZlXkEyXkFqcGc@._V1_.jpg",
+                rating: 8.3,
+                genres: ["Drama", "Fantasy", "Romance"],
+                year: 2001,
+                episodes: 1,
+                synopsis: "A documentary filmmaker interviews a retired actress, blending her movie roles with her life story in a search for a mysterious man she's loved for decades."
+            },
+            {
+                id: 177,
+                title: "Bakuman",
+                image: "https://m.media-amazon.com/images/M/MV5BOTg5YTNhODUtZDgyMi00MWNjLThjM2ItMWRkMTEyMTcxNTQzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 8.3,
+                genres: ["Comedy", "Drama", "Romance", "Shounen"],
+                year: 2010,
+                episodes: 75,
+                synopsis: "Two high school students pursue their dream of becoming professional manga artists while navigating the competitive industry and their personal lives."
+            },
+            {
+                id: 178,
+                title: "Sweetness & Lightning",
+                image: "https://m.media-amazon.com/images/M/MV5BMmI2ZDJjM2QtOTJiNC00MGI4LWI4MGItYWY1ZGM3N2M0ODJiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                rating: 7.8,
+                genres: ["Comedy", "Seinen", "Slice of Life"],
+                year: 2016,
+                episodes: 12,
+                synopsis: "A widowed teacher learns to cook for his young daughter with the help of one of his students, creating new family bonds through food."
+            },
             {
                 id: 179,
                 title: "Liz and the Blue Bird",
@@ -140,6 +1924,7 @@
                 episodes: 11,
                 synopsis: "A group of socially awkward female otaku have their lives disrupted when a stylish cross-dressing man enters their women-only apartment building."
             }
+
         ];
 
         let nextId = 181;
