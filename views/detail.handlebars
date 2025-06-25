@@ -1,0 +1,35 @@
+<body>
+    <div class="anime-details" id="wrapper">
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+
+        const animeList = JSON.parse(localStorage.getItem('animeList')) || [];
+
+        const anime = animeList.find(anime => anime.id == id);
+
+        const wrapper = document.getElementById('wrapper');
+
+        if (anime) {
+            wrapper.innerHTML = `
+                <h1 class="anime-title">${anime.title}</h1>
+                <div class="anime-info">
+                    <div class="anime-media">
+                        <img src="${anime.image}" alt="${anime.title}" style="max-width: 300px;">
+                    </div>
+                    ${anime.link ? `<iframe width="560" height="315" src="${anime.link}"
+                        title="${anime.title} trailer" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>` : '<p><i>No trailer available</i></p>'}
+                    <div class="rating"><strong>Rating:</strong> ⭐ ${anime.rating}</div>
+                    <div class="anime-description"><p>${anime.synopsis}</p></div>
+                </div>
+            `;
+        } else {
+            wrapper.innerHTML = `<h2>Anime not found.</h2>`;
+        }
+        const animeList = JSON.parse(localStorage.getItem('animeList')) || [];
+    </script>
+</body>

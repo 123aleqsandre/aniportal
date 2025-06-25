@@ -1,0 +1,313 @@
+<main class="container">
+        <div class="filter-section">
+            <h2>Explore Anime</h2>
+            <div class="filters">
+                <div class="filter-dropdown" id="genre-filter">Genre: All</div>
+                <div class="filter-dropdown" id="year-filter">Year: All</div>
+                <div class="filter-dropdown" id="sort-filter">Sort: Popularity</div>
+            </div>
+        </div>
+        
+        <div class="anime-grid" id="anime-grid">
+        </div>
+    </main>
+
+    <!-- add animes -->
+    <button class="add-anime-btn" onclick="openModal()">Add new anime</button>
+
+    <!-- Modal -->
+    <div id="animeModal" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal()">&times;</span>
+           <h2>Add new anime</h2>
+           <form id="animeForm">
+               <div class="form-group">
+                   <label for="title">name:</label>
+                   <input type="text" id="title" required>
+               </div>
+               <div class="form-group">
+                   <label for="rating">rating (1-10):</label>
+                   <input type="number" id="rating" min="1" max="10" step="0.1" required>
+               </div>
+               <div class="form-group">
+                   <label for="genre">Genre:</label>
+                   <div class="genre-container">
+                       <div class="genre-item">
+                           <input type="checkbox" id="action" value="Action">
+                           <label for="action">Action</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="adventure" value="Adventure">
+                           <label for="adventure">Adventure</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="comedy" value="Comedy">
+                           <label for="comedy">Comedy</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="drama" value="Drama">
+                           <label for="drama">Drama</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="fantasy" value="Fantasy">
+                           <label for="fantasy">Fantasy</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="romance" value="Romance">
+                           <label for="romance">Romance</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="scifi" value="Sci-Fi">
+                           <label for="scifi">Sci-Fi</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="thriller" value="Thriller">
+                           <label for="thriller">Thriller</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="horror" value="Horror">
+                           <label for="horror">Horror</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="mystery" value="Mystery">
+                           <label for="mystery">Mystery</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="slice" value="Slice of Life">
+                           <label for="slice">Slice of Life</label>
+                       </div>
+                       <div class="genre-item">
+                           <input type="checkbox" id="sports" value="Sports">
+                           <label for="sports">Sports</label>
+                       </div>
+                   </div>
+               </div>
+               <div class="form-group">
+                   <label for="year">year</label>
+                   <input type="number" id="year" min="1950" max="2024" required>
+               </div>
+               <div class="form-group">
+                   <label for="image">image link</label>
+                   <input type="url" id="image" placeholder="https://example.com/image.jpg" required>
+               </div>
+               <button type="submit" class="submit-btn">Add</button>
+           </form>
+       </div>
+    </div>
+
+    <!-- Handlebars Template -->
+    <script id="anime-template" type="text/x-handlebars-template">
+        {{#each animeList}}
+            <a class="anime-card" href="./detail?id={{id}}" data-id="{{id}}">
+                <img src="{{image}}" alt="{{title}}">
+                <div class="anime-info">
+                    <div class="anime-title">{{title}}</div>
+                    <div class="anime-meta">
+                        <span>{{year}}</span>
+                        <span>⭐ {{rating}}</span>
+                    </div>
+                </div>
+                <div class="watch-overlay">
+                    <button class="watch-btn">Watch Now</button>
+                </div>
+            </a>
+        {{/each}}
+    </script>
+
+    <!-- Handlebars Library -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+
+    <script>
+        // Sample anime data
+        let animeList = [
+            {
+                id: 179,
+                title: "Liz and the Blue Bird",
+                image: "https://upload.wikimedia.org/wikipedia/en/3/33/Liz_and_the_Blue_Bird.jpg",
+                rating: 8.1,
+                genres: ["Drama", "Music", "School"],
+                year: 2018,
+                episodes: 1,
+                synopsis: "Two high school band members navigate their changing relationship as graduation approaches, mirrored by a fairytale they perform as a musical piece."
+            },
+            {
+                id: 180,
+                title: "Princess Jellyfish",
+                image: "https://m.media-amazon.com/images/I/71q3fQJhJfL._AC_UF1000,1000_QL80_.jpg",
+                rating: 8.0,
+                genres: ["Comedy", "Josei", "Slice of Life"],
+                year: 2010,
+                episodes: 11,
+                synopsis: "A group of socially awkward female otaku have their lives disrupted when a stylish cross-dressing man enters their women-only apartment building."
+            }
+        ];
+
+        let nextId = 181;
+        const animeGrid = document.getElementById('anime-grid');
+        const genreFilter = document.getElementById('genre-filter');
+        const yearFilter = document.getElementById('year-filter');
+        const sortFilter = document.getElementById('sort-filter');
+
+        // Compile Handlebars template
+        const templateSource = document.getElementById('anime-template').innerHTML;
+        const template = Handlebars.compile(templateSource);
+
+        // Display anime using Handlebars
+        function displayAnime(animeArray) {
+            const html = template({ animeList: animeArray });
+            animeGrid.innerHTML = html;
+
+            // Add event listeners to anime cards after rendering
+            const animeCards = document.querySelectorAll('.anime-card');
+            animeCards.forEach(card => {
+                card.addEventListener("mouseenter", () => {
+                    card.style.backgroundColor = "rgba(88, 166, 255, 0.7)";
+                    card.querySelector(".watch-overlay").style.opacity = "1";
+                });
+                card.addEventListener("mouseleave", () => {
+                    card.style.backgroundColor = "";
+                    card.querySelector(".watch-overlay").style.opacity = "0";
+                });
+            });
+        }
+
+        function createDropdown(filterElement, options, filterFunction) {
+            const dropdown = document.createElement("div");
+            dropdown.classList.add("dropdown-menu");
+            dropdown.style.position = "absolute";
+            dropdown.style.background = "#21262d";
+            dropdown.style.padding = "0.5rem";
+            dropdown.style.borderRadius = "4px";
+            dropdown.style.display = "none";
+            dropdown.style.top = "100%";
+            dropdown.style.left = "0";
+            dropdown.style.zIndex = "1000";
+            dropdown.style.width = "150px";
+
+            options.forEach(option => {
+                const optionElement = document.createElement("div");
+                optionElement.textContent = option;
+                optionElement.classList.add("dropdown-option");
+                optionElement.addEventListener("click", () => {
+                    filterElement.textContent = option;
+                    filterFunction(option);
+                    dropdown.style.display = "none";
+                });
+                dropdown.appendChild(optionElement);
+            });
+
+            document.body.appendChild(dropdown);
+
+            filterElement.addEventListener("click", (event) => {
+                const rect = filterElement.getBoundingClientRect();
+                dropdown.style.top = `${rect.bottom + window.scrollY}px`;
+                dropdown.style.left = `${rect.left + window.scrollX}px`;
+                dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!filterElement.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
+        }
+
+        function filterByYearRange(range) {
+            if (range === "All") {
+                displayAnime(animeList);
+            } else {
+                const [start, end] = range.split("-").map(Number);
+                const filteredAnime = animeList.filter(anime => anime.year >= start && anime.year <= end);
+                displayAnime(filteredAnime);
+            }
+        }
+
+        function filterByGenre(genre) {
+            if (genre === "All") {
+                displayAnime(animeList);
+            } else {
+                const filteredAnime = animeList.filter(anime => anime.genres.includes(genre));
+                displayAnime(filteredAnime);
+            }
+        }
+
+        function sortAnime(option) {
+            let sortedAnime = [...animeList];
+            if (option === "Rating") {
+                sortedAnime.sort((a, b) => b.rating - a.rating);
+            } else if (option === "Year") {
+                sortedAnime.sort((a, b) => b.year - a.year);
+            } else if (option === "Popularity") {
+                // Sort by rating as popularity indicator
+                sortedAnime.sort((a, b) => b.rating - a.rating);
+            }
+            displayAnime(sortedAnime);
+        }
+
+        function searchAnime(query) {
+            const filteredAnime = animeList.filter(anime =>
+                anime.title.toLowerCase().includes(query.toLowerCase())
+            );
+            displayAnime(filteredAnime);
+        }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('animeModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('animeModal').style.display = 'none';
+            document.getElementById('animeForm').reset();
+            const checkboxes = document.querySelectorAll('.genre-item input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+        }
+
+        function addAnime(animeData) {
+            const newAnime = {
+                id: nextId++,
+                ...animeData
+            };
+            animeList.push(newAnime);
+            displayAnime(animeList); // Re-render with new anime
+        }
+
+        // Event listeners
+        document.getElementById('animeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const selectedGenres = [];
+            const checkboxes = document.querySelectorAll('.genre-item input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                selectedGenres.push(checkbox.value);
+            });
+            
+            const animeData = {
+                title: document.getElementById('title').value,
+                rating: parseFloat(document.getElementById('rating').value),
+                genres: selectedGenres,
+                year: parseInt(document.getElementById('year').value),
+                image: document.getElementById('image').value
+            };
+
+            addAnime(animeData);
+            closeModal();
+        });
+
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('animeModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            displayAnime(animeList);
+            
+            // Create dropdowns with updated genre list
+            createDropdown(yearFilter, ["All", "1950-1959", "1960-1969", "1970-1979", "1980-1989", "1990-1999", "2000-2010", "2011-2020", "2021-2024"], filterByYearRange);
+            createDropdown(genreFilter, ["All", "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Romance", "Sci-Fi", "Thriller", "Horror", "Mystery", "Slice of Life", "Sports"], filterByGenre);
+            createDropdown(sortFilter, ["Popularity", "Rating", "Year"], sortAnime);
+        });
+    </script>
